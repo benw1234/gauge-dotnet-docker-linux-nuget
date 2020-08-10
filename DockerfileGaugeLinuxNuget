@@ -1,4 +1,4 @@
-FROM jenniferz79/gaugedotnetlinux
+FROM gaugedotnetlinux
 
 # Install Azure Artifacts Credential Provider, to get Nuget package DS_AUT.Framework on Azure
 RUN wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
@@ -8,3 +8,6 @@ ENV NUGET_CREDENTIALPROVIDER_SESSIONTOKENCACHE_ENABLED true
 
 # Set environment variable for FEED_URL and Personal Access Token during run time.
 # ENV VSS_NUGET_EXTERNAL_FEED_ENDPOINTS "{\"endpointCredentials\": [{\"endpoint\":\"${FEED_URL}\", \"username\":\"docker\", \"password\":\"${PAT}\"}]}"
+
+# Disable gauge for auto checking update
+Run gauge config check_updates false
