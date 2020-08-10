@@ -1,4 +1,4 @@
-FROM gaugedotnetlinux
+FROM jenniferz79/gaugedotnetlinux
 
 # Install Azure Artifacts Credential Provider, to get Nuget package DS_AUT.Framework on Azure
 RUN wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
